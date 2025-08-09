@@ -148,3 +148,29 @@ def render(df):
     st.plotly_chart(fig, use_container_width=True)
     
     
+    
+    
+    st.subheader("Relationship Between Social Energy and Talkativeness")
+
+    # Create scatter plot with regression line
+    fig = px.scatter(
+        df,
+        x='social_energy',
+        y='talkativeness',
+        color='personality_type',
+        title='Relationship Between Social Energy and Talkativeness',
+        opacity=0.6,
+        trendline='ols'  # Add regression line
+    )
+
+    # Customize layout
+    fig.update_layout(
+        width=800,
+        height=600,
+        xaxis_title='Social Energy',
+        yaxis_title='Talkativeness'
+    )
+
+    # Display in Streamlit
+    st.plotly_chart(fig, use_container_width=True)
+

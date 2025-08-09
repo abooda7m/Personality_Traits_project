@@ -4,14 +4,10 @@ import plotly.express as px
 def render(df):
     st.subheader(" Categorical Analysis")
 
-    cat_cols = df.select_dtypes(include='object').columns.tolist()
-    if not cat_cols:
-        st.info("No categorical columns available.")
-        return
+    cat_cols = "personality_type"
 
-    selected_col = st.selectbox("Select a categorical column:", cat_cols)
-    fig = px.histogram(df, x=selected_col, color="personality_type", barmode="group")
-    st.plotly_chart(fig)
+    fig = px.histogram(df, x=cat_cols, color="personality_type", barmode="group")
+    st.plotly_chart(fig )
     
     
 
