@@ -12,10 +12,10 @@ st.set_page_config(page_title="Personality Classification App", layout="wide")
 df = load_data()
 
 tabs = {
-    "📊 Data Overview": data_overview,
-    "🧩 Categorical Analysis": categorical,
-    "🔢 Numerical Analysis": numerical,
-    "🤖 Prediction": prediction,
+    " Data Overview": data_overview,
+    " Categorical Analysis": categorical,
+    " Numerical Analysis": numerical,
+    " Prediction": prediction,
 }
 
 selected = st.sidebar.radio("Go to", list(tabs.keys()))
